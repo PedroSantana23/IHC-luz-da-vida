@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luz da Vida - Cadastro</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo">
+                <img src="C:\Users\Pichau\OneDrive\Imagens\Screenshots\Captura de tela 2025-05-27 153107.png" alt="Luz da Vida Logo">
+            </div>
+            <div class="doctor-image">
+                <img src="C:\Users\Pichau\OneDrive\Imagens\Screenshots\Captura de tela 2025-05-27 152936.png" alt="Doctor">
+            </div>
+        </div>
+        <div class="right-panel">
+            <div class="language-selector">
+                <img src="https://flagcdn.com/24x18/br.png" alt="Português" title="Português">
+            </div>
+            <form id="registrationForm" class="registration-form">
+                <h1>Cadastro</h1>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">E-mail<span class="required">*</span></label>
+                        <input type="email" id="email" placeholder="Digite seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cpf">CPF<span class="required">*</span></label>
+                        <input type="text" id="cpf" placeholder="000.000.000-00" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Nome<span class="required">*</span></label>
+                        <input type="text" id="name" placeholder="Digite seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" placeholder="000.000.000-00">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="street">Rua</label>
+                        <input type="text" id="street" placeholder="Rua">
+                    </div>
+                    <div class="form-group">
+                        <label for="neighborhood">Bairro</label>
+                        <input type="text" id="neighborhood" placeholder="Bairro">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="city">Cidade</label>
+                        <input type="text" id="city" placeholder="Cidade">
+                    </div>
+                    <div class="form-group">
+                        <label for="state">Estado</label>
+                        <input type="text" id="state" placeholder="Estado">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="password">Senha<span class="required">*</span></label>
+                        <div class="password-input">
+                            <input type="password" id="password" placeholder="Digite sua senha" required>
+                            <button type="button" class="toggle-password" data-target="password">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/65000-RmjSJiW8b5C34YR3FZgs7NP7kU0r9l.png" alt="Mostrar senha" class="eye-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="gender">Gênero<span class="required">*</span></label>
+                        <select id="gender" required>
+                            <option value="">Selecione</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                            <option value="O">Outro</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="confirmPassword">Repita sua senha</label>
+                        <div class="password-input">
+                            <input type="password" id="confirmPassword" placeholder="Repita sua senha" required>
+                            <button type="button" class="toggle-password" data-target="confirmPassword">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/65000-RmjSJiW8b5C34YR3FZgs7NP7kU0r9l.png" alt="Mostrar senha" class="eye-icon">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="birthdate">Data de Nascimento<span class="required">*</span></label>
+                        <div class="date-input-container">
+                            <input type="text" id="birthdate" placeholder="dd/mm/aaaa" required>
+                            <button type="button" class="calendar-button" id="calendarButton">
+                                📅
+                            </button>
+                            <div class="calendar-popup" id="calendarPopup">
+                                <div class="calendar-header">
+                                    <button type="button" class="nav-button" id="prevMonth">‹</button>
+                                    <span class="month-year" id="monthYear"></span>
+                                    <button type="button" class="nav-button" id="nextMonth">›</button>
+                                </div>
+                                <div class="calendar-weekdays">
+                                    <div>D</div>
+                                    <div>S</div>
+                                    <div>T</div>
+                                    <div>Q</div>
+                                    <div>Q</div>
+                                    <div>S</div>
+                                    <div>S</div>
+                                </div>
+                                <div class="calendar-days" id="calendarDays"></div>
+                            </div>
+                        </div>
+                        <div class="error-message" id="birthdateError"></div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="button" class="btn-back">Voltar</button>
+                    <button type="submit" class="btn-save">Salvar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
