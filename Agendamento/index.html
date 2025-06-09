@@ -1,11 +1,75 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Luz da Vida - Agendamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  
+    <header>
+        <nav>
+            <ul>
+                <li>Página Inicial</li>
+                <li>Agendamentos</li>
+                <li>Consultas</li>
+                <li>Contato</li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Formulário de Agendamento Médico</h2>
+        <form>
+            <label>Nome</label>
+            <div class="nome_input">
+                <input type="text" placeholder="Primeiro nome">
+                <input type="text" placeholder="Sobrenome">
+            </div>
+            <label>Data de Nascimento</label>
+            <div class="data_nascimento_input">
+                <input type="text" placeholder="Dia">
+                <input type="text" placeholder="Mês">
+                <input type="text" placeholder="Ano">
+            </div>
+            <label>Rua</label>
+            <div>
+                <input type="text" placeholder="Rua">
+            </div>
+            <label>Bairro</label>
+            <div>
+                <input type="text" placeholder="Bairro">
+            </div>
+            <label>Cidade</label>
+            <div>
+                <input type="text" placeholder="ex: Rio de Janeiro">
+            </div>
+            <label>Estado</label>
+            <div>
+                <input type="text" placeholder="ex: Rio de Janeiro">
+            </div>
+            <label>CEP</label>
+            <div>
+                <input type="text" placeholder="ex: 00.000-000">
+            </div>
+            <label>E-mail</label>
+            <div>
+                <input type="text" placeholder="exemplo@gmail.com">
+            </div>
+            <label>Data da Consulta</label>
+            <div>
+                <input type="date" placeholder="dd/mm/yyyy">
+            </div>
+            <label>Telefone de Contato</label>
+            <div>
+                <input type="text" placeholder="ex: (00) 00000 - 0000">
+            </div>
+            <input type="submit" value="Agendar">
+        </form>
+    </main>
+    <footer>
+        Copyright &copy; 2025
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

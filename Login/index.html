@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Clinica Luz da Vida</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="painel-esquerdo"></div>
+            <div class="painel-direito">
+                <div class="bandeira-linguagem">
+                    <img src="https://flagcdn.com/w40/br.png" alt="Bandeira do Brasil">
+                </div>  
+                <h2 class="titulo">Login</h2>
+                 
+            
+                <form id="formulario-login">
+                    <label for="email">E-mail<span style="color: red;">*</span></label>
+                    <input type="email" id="email" placeholder="Digite seu e-mail" required/>
+
+                    <label for="senha">Senha<span style="color: red;">*</span></label>
+                    <div class="container-senha">
+                        <input type="password" id="senha" placeholder="Digite sua senha" required/>
+                        <img src="./images/olho.png" id="icon-senha" class="icon-olho" alt="Mostrar senha">
+                    </div>
+
+                    <div class="configuracoes-senha">
+                        <label><input type="checkbox">Lembrar minha senha</label>
+                        <a href="#">Esqueceu sua senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn">Entrar</button>
+
+                    <div class="opcao">Ou</div>
+
+                    <button class="google-btn">
+                        <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="google-logo">
+                        Entrar com o Google
+                    </button>
+
+                    <p class="registrar">Ainda não possui conta? <a href="../Cadastro/index.html">Cadastrar-se</a></p>
+                </form>
+            </div>
+        </div>
+        <script src="index.js"></script>
+    </main>
+</body>
+</html>
