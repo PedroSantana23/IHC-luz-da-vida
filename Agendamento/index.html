@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendamento</title>
+    <title>Luz da vida - Agendamento</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .required {
+            color: red;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
-                <li>Página Inicial</li>
-                <li>Agendamentos</li>
-                <li>Consultas</li>
-                <li>Contato</li>
-            </ul>
+            <h1>Luz da Vida</h1>
         </nav>
     </header>
     <main>
         <h2>Formulário de Agendamento Médico</h2>
         <form>
-            <label>Nome</label>
+            <label>Nome <span class="required">*</span></label>
             <div class="nome_input">
                 <input type="text" placeholder="Primeiro nome">
                 <input type="text" placeholder="Sobrenome">
             </div>
-            <label>Data de Nascimento</label>
+            <label>Data de Nascimento <span class="required">*</span></label>
             <div class="data_nascimento_input">
                 <input type="text" placeholder="Dia">
                 <input type="text" placeholder="Mês">
@@ -47,19 +47,19 @@
             <div>
                 <input type="text" placeholder="ex: Rio de Janeiro">
             </div>
-            <label>CEP</label>
+            <label>CEP <span class="required">*</span></label>
             <div>
                 <input type="text" placeholder="ex: 00.000-000">
             </div>
-            <label>E-mail</label>
+            <label>E-mail <span class="required">*</span></label>
             <div>
                 <input type="text" placeholder="exemplo@gmail.com">
             </div>
-            <label>Data da Consulta</label>
+            <label>Data da Consulta <span class="required">*</span></label>
             <div>
                 <input type="date" placeholder="dd/mm/yyyy">
             </div>
-            <label>Telefone de Contato</label>
+            <label>Telefone de Contato <span class="required">*</span></label>
             <div>
                 <input type="text" placeholder="ex: (00) 00000 - 0000">
             </div>
@@ -69,7 +69,5 @@
     <footer>
         Copyright &copy; 2025
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
