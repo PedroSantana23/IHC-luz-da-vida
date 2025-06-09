@@ -1,73 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luz da vida - Agendamento</title>
-    <link rel="stylesheet" href="styles.css">
-    <style>
-        .required {
-            color: red;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulário de Agendamento Médico</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css">
+
 </head>
+
 <body>
+  <main>
     <header>
-        <nav>
-            <h1>Luz da Vida</h1>
-        </nav>
+      
+      <nav>
+        <div class="logo">
+            <i class="fas fa-heartbeat"></i>
+            <strong>Luz da Vida</strong>
+          </div>
+      </nav>
     </header>
-    <main>
-        <h2>Formulário de Agendamento Médico</h2>
+
+    <div class="header-container">
+      <h1>Formulário de Agendamento Médico</h1>
+    </div>
+
+    <div class="form-container">
+      <div class="form-box">
         <form>
-            <label>Nome <span class="required">*</span></label>
-            <div class="nome_input">
-                <input type="text" placeholder="Primeiro nome">
-                <input type="text" placeholder="Sobrenome">
+            <div class="form-group">
+                <label for="nome-do-paciente">Nome do Paciente <span class="required">*</span></label>
+                <input type="text" id="nome-do-paciente" placeholder="Nome Completo" />
+              </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="cpf">CPF <span class="required">*</span></label>
+              <input type="text" id="cpf" placeholder="000.000.000-00" />
             </div>
-            <label>Data de Nascimento <span class="required">*</span></label>
-            <div class="data_nascimento_input">
-                <input type="text" placeholder="Dia">
-                <input type="text" placeholder="Mês">
-                <input type="text" placeholder="Ano">
+            <div class="form-group">
+              <label for="nascimento">Data de Nascimento <span class="required">*</span></label>
+              <input type="date" id="nascimento" />
             </div>
-            <label>Rua</label>
-            <div>
-                <input type="text" placeholder="Rua">
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="especialidade">Especialidade</label>
+              <select id="especialidade">
+                <option selected disabled>Selecione a especialidade</option>
+                <option>Cardiologia</option>
+                <option>Clínica Médica</option>
+                <option>Gastroenterologia</option>
+                <option>Otorrinolaringologia</option>
+                <option>Psiquiatria</option>
+              </select>
             </div>
-            <label>Bairro</label>
-            <div>
-                <input type="text" placeholder="Bairro">
+            <div class="form-group">
+              <label for="medico">Nome do médico</label>
+              <input type="text" id="medico" />
             </div>
-            <label>Cidade</label>
-            <div>
-                <input type="text" placeholder="ex: Rio de Janeiro">
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="cep">CEP</label>
+              <input type="text" id="cep" placeholder="00.000-000" />
             </div>
-            <label>Estado</label>
-            <div>
-                <input type="text" placeholder="ex: Rio de Janeiro">
+            <div class="form-group">
+              <label for="estado">Estado</label>
+              <input type="text" id="estado" />
             </div>
-            <label>CEP <span class="required">*</span></label>
-            <div>
-                <input type="text" placeholder="ex: 00.000-000">
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="cidade">Cidade</label>
+              <input type="text" id="cidade" />
             </div>
-            <label>E-mail <span class="required">*</span></label>
-            <div>
-                <input type="text" placeholder="exemplo@gmail.com">
+            <div class="form-group">
+              <label for="bairro">Bairro</label>
+              <input type="text" id="bairro" />
             </div>
-            <label>Data da Consulta <span class="required">*</span></label>
-            <div>
-                <input type="date" placeholder="dd/mm/yyyy">
+          </div>
+
+          <div class="form-group">
+            <label for="rua">Rua</label>
+            <input type="text" id="rua" />
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="telefone">Telefone de Contato <span class="required">*</span></label>
+              <input type="text" id="telefone" placeholder="(00) 00000-0000" />
             </div>
-            <label>Telefone de Contato <span class="required">*</span></label>
-            <div>
-                <input type="text" placeholder="ex: (00) 00000 - 0000">
+            <div class="form-group">
+              <label for="email">e-mail <span class="required">*</span></label>
+              <input type="email" id="email" placeholder="meuemail@dominio.com" />
             </div>
-            <input type="submit" value="Agendar">
+          </div>
+
+          <div class="inline-group">
+            <div class="form-group">
+              <label for="data-adicional">Data da Consulta <span class="required">*</span></label>
+              <input type="date" id="data-consulta" />
+            </div>
+            <div class="form-group">
+              <label for="horario-consulta">Horário da Consulta <span class="required">*</span></label>
+              <input type="time" id="horario-consulta" />
+            </div>
+          </div>
+
+          <div class="radio-group">
+            <label>Já é paciente?</label>
+            <label><input type="radio" name="paciente" value="Sim" /> Sim</label>
+            <label><input type="radio" name="paciente" value="Não" /> Não</label>
+          </div>
+
+          <button type="submit" class="btn">Agendar</button>
         </form>
-    </main>
+      </div>
+    </div>
+
+    <div class="accessibility-buttons">
+      <button><i class="fas fa-sign-language"></i> Libras</button>
+      <button><i class="fas fa-assistive-listening-systems"></i> Voz</button>
+      <button><i class="fas fa-low-vision"></i> Acessibilidade</button>
+    </div>
+
     <footer>
-        Copyright &copy; 2025
+      <p>&copy; 2025 Luz da Vida. Todos os direitos reservados.</p>
     </footer>
+  </main>
 </body>
 </html>
