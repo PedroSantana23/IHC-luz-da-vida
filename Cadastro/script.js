@@ -235,27 +235,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form submission
     document.getElementById('registrationForm').addEventListener('submit', function(e) {
-        e.preventDefault();
+        e.preventDefault(); // Previna o comportamento padrão de envio do formulário (recarregar a página)
         
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
         const birthdate = document.getElementById('birthdate').value;
         
-        // Validate passwords match
         if (password !== confirmPassword) {
             alert('As senhas não coincidem!');
-            return;
+            return; 
         }
-        
-        // Validate age if birthdate is provided
+
         if (birthdate) {
-            if (!validateDateInput(birthdate)) {
-                alert('Por favor, insira uma data de nascimento válida.');
+            if (!validateDateInput(birthdate)) { 
+                alert('Por favor, insira uma data de nascimento válida e verifique a idade mínima.');
                 return;
             }
         }
         
-        alert('Cadastro realizado com sucesso!');
+        alert('Cadastro realizado com sucesso! Redirecionando para a página de agendamento...');
+        
+        window.location.href = '../Agendamento/index.html'; 
     });
 
     // Back button
